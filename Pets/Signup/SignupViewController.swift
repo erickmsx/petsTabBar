@@ -67,7 +67,12 @@ class SignupViewController: UIViewController, UIImagePickerControllerDelegate & 
             return
         }
         
-        let user = User(name: name, email: email, password: password)
+        guard let image = imageView.image else{
+            presentMessage(message: "Você precisa selecionar uma imagem para continuar")
+            return
+        }
+        
+        let user = User(name: name, email: email, password: password, image: image)
         users.append(user)
         presentMessage(message: "Usuário \(name) cadastrado com sucesso")
     }

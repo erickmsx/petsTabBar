@@ -17,6 +17,8 @@
 		6F0D0A4B272E34A1004BB3AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0D0A4A272E34A1004BB3AF /* ViewController.swift */; };
 		6F0D0A4E272E34A1004BB3AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F0D0A4C272E34A1004BB3AF /* Main.storyboard */; };
 		6F0D0A53272E34A4004BB3AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F0D0A51272E34A4004BB3AF /* LaunchScreen.storyboard */; };
+		6F312A4A2742AD800094CE5F /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F312A482742AD800094CE5F /* UserDetailViewController.swift */; };
+		6F312A4B2742AD800094CE5F /* UserDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F312A492742AD800094CE5F /* UserDetailViewController.xib */; };
 		6F544BB427406B1600B0F372 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F544BB327406B1600B0F372 /* User.swift */; };
 		6F544BB7274072FE00B0F372 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F544BB5274072FE00B0F372 /* SignupViewController.swift */; };
 		6F544BB8274072FE00B0F372 /* SignupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F544BB6274072FE00B0F372 /* SignupViewController.xib */; };
@@ -43,6 +45,8 @@
 		6F0D0A4F272E34A4004BB3AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6F0D0A52272E34A4004BB3AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6F0D0A54272E34A4004BB3AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6F312A482742AD800094CE5F /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
+		6F312A492742AD800094CE5F /* UserDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserDetailViewController.xib; sourceTree = "<group>"; };
 		6F544BB327406B1600B0F372 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		6F544BB5274072FE00B0F372 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		6F544BB6274072FE00B0F372 /* SignupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignupViewController.xib; sourceTree = "<group>"; };
@@ -97,8 +101,18 @@
 				6F544B5127405E1000B0F372 /* Pet Register */,
 				6F544B5227405E3400B0F372 /* Color Selection */,
 				6F544BB92740731D00B0F372 /* Signup */,
+				6F312A4C2742B6CD0094CE5F /* User Detail */,
 			);
 			path = Pets;
+			sourceTree = "<group>";
+		};
+		6F312A4C2742B6CD0094CE5F /* User Detail */ = {
+			isa = PBXGroup;
+			children = (
+				6F312A482742AD800094CE5F /* UserDetailViewController.swift */,
+				6F312A492742AD800094CE5F /* UserDetailViewController.xib */,
+			);
+			path = "User Detail";
 			sourceTree = "<group>";
 		};
 		6F544B4F27405DD600B0F372 /* Pet List */ = {
@@ -220,6 +234,7 @@
 				6F0B1EE3272F3D83001AD893 /* ListPetViewController.xib in Resources */,
 				6F0B1EDF272F3BB3001AD893 /* PetTableViewCell.xib in Resources */,
 				6F93A3F727378AE2006A7315 /* RegisterPetViewController.xib in Resources */,
+				6F312A4B2742AD800094CE5F /* UserDetailViewController.xib in Resources */,
 				6F544BB8274072FE00B0F372 /* SignupViewController.xib in Resources */,
 				6F64D9E827310CCD00803AB2 /* Assets.xcassets in Resources */,
 				6F0D0A4E272E34A1004BB3AF /* Main.storyboard in Resources */,
@@ -235,6 +250,7 @@
 			files = (
 				6F0D0A4B272E34A1004BB3AF /* ViewController.swift in Sources */,
 				6F0B1ED7272F2E9B001AD893 /* Pet.swift in Sources */,
+				6F312A4A2742AD800094CE5F /* UserDetailViewController.swift in Sources */,
 				6F544BB7274072FE00B0F372 /* SignupViewController.swift in Sources */,
 				6FF630D8273AC9B000BDBD26 /* ColorSelectionViewController.swift in Sources */,
 				6F0B1EE2272F3D83001AD893 /* ListPetViewController.swift in Sources */,

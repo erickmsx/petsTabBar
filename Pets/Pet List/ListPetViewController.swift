@@ -6,7 +6,6 @@
 //
 
 import UIKit
-var petsList: [Pet] = []
 
 //implement func of UITableViewDataSource
 class ListPetViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, addPetDelegate {
@@ -59,7 +58,7 @@ class ListPetViewController: UIViewController, UITableViewDataSource, UITableVie
             
             self.filteredItems = []
             self.isFiltering = true
-            for pet in petsList{
+            for pet in self.user.petList{
                 
                 if pet.isPetVaccinated {
                     self.filteredItems.append(pet)
@@ -76,7 +75,7 @@ class ListPetViewController: UIViewController, UITableViewDataSource, UITableVie
             self.filteredItems = []
             self.isFiltering = true
             
-            for pet in petsList{
+            for pet in self.user.petList{
                 if !pet.isPetVaccinated{
                     self.filteredItems.append(pet)
                 }
@@ -113,6 +112,7 @@ class ListPetViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func didAddPet(pet: Pet){
+        user.petList.append(pet)
         tableView.reloadData()
     }
     
@@ -141,7 +141,7 @@ class ListPetViewController: UIViewController, UITableViewDataSource, UITableVie
         if isFiltering{
             return filteredItems.count
         } else{
-            return petsList.count
+            return user.petList.count
         }
     }
     
@@ -158,7 +158,7 @@ class ListPetViewController: UIViewController, UITableViewDataSource, UITableVie
         if isFiltering{
             pet = filteredItems[indexPath.row]
         } else {
-            pet = petsList[indexPath.row]
+            pet = user.petList[indexPath.row]
         }
         
         cell.petNameLabel.text = pet.petName
@@ -186,7 +186,7 @@ class ListPetViewController: UIViewController, UITableViewDataSource, UITableVie
         if isFiltering{
             pet = filteredItems[indexPath.row]
         } else {
-            pet = petsList[indexPath.row]
+            pet = user.petList[indexPath.row]
         }
         let descriptionPetVC = descriptionPetViewController(selectedPet: pet)
         

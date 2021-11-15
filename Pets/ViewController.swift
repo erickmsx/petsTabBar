@@ -56,11 +56,15 @@ class ViewController: UIViewController {
         navController.tabBarItem.title = "Lista de pets"
         navController.tabBarItem.image = #imageLiteral(resourceName: "paw")
         
+        let userDetailVC = UserDetailViewController(user: user)
+        userDetailVC.tabBarItem.title = "Perfil"
+        userDetailVC.tabBarItem.image = #imageLiteral(resourceName: "2354573-2")
+        
         let tabBarController = UITabBarController()
         tabBarController.tabBar.tintColor = .white
         tabBarController.tabBar.unselectedItemTintColor = .lightGray
         tabBarController.tabBar.barTintColor = #colorLiteral(red: 0.5724719167, green: 0.1509509087, blue: 0.1439149976, alpha: 1)
-        tabBarController.viewControllers = [navController]
+        tabBarController.viewControllers = [navController, userDetailVC]
         
         UIApplication.shared.windows.first?.rootViewController = tabBarController
     }

@@ -117,7 +117,6 @@ class RegisterPetViewController: UIViewController, UITextFieldDelegate, UIImageP
         let pet = Pet(name: petName, specie: petSpecie, birthDate: petBirthDate, color: color, isVaccinated: isVaccinatedSwitch.isOn )
         
         pet.petImage = imageView.image
-        petsList.append(pet)
         delegate?.didAddPet(pet: pet)
         dismiss(animated: true, completion: nil)
         navigationController?.popViewController(animated: true) //close the VC for the view before that
